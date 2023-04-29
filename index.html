@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .is-loading{
+            background-color: red;
+            color: #ffffff;
+            font-family: "Roboto";
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+       <div>{{ }}</div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>      
+    <script>
+       var app = new Vue({
+            el : '#app',
+            data : {
+                firstName: "Vyshnavi",
+                lastName : 'Krishna',
+                fullName: '',
+             },
+             mounted(){
+                this.fullName = (firstName + ' ' + lastName).split('').reverse().join('')
+             }
+             /*
+             methods: {
+                addName(){
+                    this.names.push(this.newName);
+                    this.newName = "";
+
+                },
+                toggelMe(){
+                    this.isLoading = !this.isLoading;
+                }
+             },
+            
+             mounted(){
+                document.querySelector("#button").addEventListener("click", () => {
+                let name = document.querySelector('#name');
+                
+                app.names.push(name.value);
+                name.value = "";     
+        })
+             }*/
+        });
+        
+    </script>
+</body>
+</html>
